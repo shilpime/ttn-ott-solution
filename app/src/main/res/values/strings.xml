@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TTN OTT Solution</string>
+
+    <string name="default_font">fonts/Montserrat-Regular.ttf</string>
+    <string name="bold_font">fonts/Montserrat-Bold.ttf</string>
+    <string name="semi_bold_font">fonts/Montserrat-SemiBold.ttf</string>
+    <string name="medium_font">fonts/Montserrat-Medium.ttf</string>
+</resources>

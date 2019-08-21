@@ -1,0 +1,129 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <style name="TitleMessageTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="OtpDigitTextView">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">@dimen/otp_digit_size</item>
+        <item name="android:textColor">@color/otp_digit_color</item>
+        <item name="android:padding">@dimen/view_margin_small</item>
+        <item name="android:background">@drawable/textinput_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TimerView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/otp_timer_color</item>
+        <item name="android:format">%2d:%2d</item>
+        <item name="android:textSize">@dimen/otp_timer_view</item>
+    </style>
+
+
+    <style name="AppLabel">
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/input_txt_color</item>
+        <item name="android:background">@drawable/text_bg</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontPath">@string/semi_bold_font</item>
+        <item name="android:textColor">@color/app_button_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="AppButtonLight" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_button_text_color</item>
+        <item name="android:background">@color/app_button_light_color</item>
+    </style>
+
+
+    <style name="TSTextBold">
+        <item name="fontPath">@string/bold_font</item>
+    </style>
+
+
+    <style name="TSTextSemiBold">
+        <item name="fontPath">@string/semi_bold_font</item>
+    </style>
+
+    <style name="TSTextMedium">
+        <item name="fontPath">@string/medium_font</item>
+    </style>
+
+    <style name="AppHintLabel">
+        <item name="fontPath">@string/medium_font</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/hint_txt_color</item>
+    </style>
+
+    <style name="AppTextLabel">
+        <item name="fontPath">@string/medium_font</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="TitleDocumentView">
+        <item name="fontPath">@string/medium_font</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_selector_app</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="fontPath">@string/medium_font</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rounded_btn</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppProgress" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+        <item name="android:indeterminateTint">@color/colorAccent</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="DocumentCardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:elevation">5dp</item>
+    </style>
+</resources>

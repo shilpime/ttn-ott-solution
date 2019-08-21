@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#173072</color>
+    <color name="colorPrimaryDark">#0C2266</color>
+    <color name="colorAccent">#0C2266</color>
+    <color name="app_bg_color">#F6F7F9</color>
+
+    <color name="title_message_color">#000000</color>
+    <color name="otp_digit_color">#000000</color>
+    <color name="otp_timer_color">#CCCCCC</color>
+
+    <color name="app_button_color">#173072</color>
+    <color name="app_button_light_color">#8BC34A</color>
+    <color name="app_button_text_color">#FFFFFF</color>
+
+    <color name="textPrimaryLight">#FFFFFF</color>
+    <color name="textSecondaryLight">#AAFFFFFF</color>
+
+    <color name="bgDark">#424242</color>
+    <color name="lbl_txt_color">#090707</color>
+    <color name="input_txt_color">#494747</color>
+    <color name="hint_txt_color">#9B9B9B</color>
+    <color name="black">#000</color>
+    <color name="img_color">#C2C8D6</color>
+    <color name="disabled_app_button_color">#92A2C7</color>
+    <color name="debit_card_color">#cccccc</color>
+    <color name="splash_bg">#173072</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#fff</color>
+    <color name="line_color">#E4E7EE</color>
+    <color name="pending_status">#E7AA01</color>
+    <color name="approved_status">#05A360</color>
+</resources>
