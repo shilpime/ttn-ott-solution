@@ -16,7 +16,9 @@ class HomeActivity : BaseActivity() {
          * This will show the Fragment associated with this action - R.id.action_sign_in.
          * Checkout nav_home.xml in navigation folder of resources.
          */
-        findNavController(R.id.fragment_container).navigate(R.id.action_home_landing)
+//        findNavController(R.id.fragment_container).navigate(R.id.action_home_landing)
+        setSupportActionBar(toolbar_layout.findViewById(R.id.toolbar))
+        supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
     /**

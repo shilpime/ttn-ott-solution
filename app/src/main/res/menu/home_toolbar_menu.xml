@@ -4,4 +4,7 @@
           android:icon="@android:drawable/ic_menu_search"
           android:id="@+id/search_btn"
           app:showAsAction="always"/>
+    <item android:title="Play"
+          android:icon="@android:drawable/ic_media_play"
+          android:id="@+id/play_btn"/>
 </menu>

@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.features.home.HomeActivity"/>
+        <activity android:name=".ui.features.player.PlayerActivity"
+                  android:configChanges="layoutDirection|orientation|screenSize"/>
+
     </application>
 
 </manifest>
