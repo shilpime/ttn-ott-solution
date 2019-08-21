@@ -2,7 +2,6 @@ package com.ottsolution.demo.data.networking.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import java.util.ArrayList
 
 class ConfigResponse  : BaseResponse() {
 
@@ -20,6 +19,34 @@ class ConfigResponse  : BaseResponse() {
         @Expose
         var config: Config? = null
 
+        @SerializedName("display")
+        @Expose
+        var display: Display? = null
+
+    }
+    class Display{
+        @SerializedName("android")
+        @Expose
+        var android: AndroidDisplay? = null
+
+    }
+    class AndroidDisplay{
+
+        @SerializedName("theme")
+        @Expose
+        var theme: String? = null
+
+        @SerializedName("background")
+        @Expose
+        var background: String? = null
+
+        @SerializedName("font")
+        @Expose
+        var font: String? = null
+
+        @SerializedName("logo")
+        @Expose
+        var logo: String? = null
     }
 
     class Hd {

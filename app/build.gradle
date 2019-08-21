@@ -23,8 +23,7 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField "String", "BASE_URL", "\"http://10.1.254.83:2222\""
-//            buildConfigField "String", "BASE_URL", "\"http://endb-backend-qa.qa3.tothenew.net\""
+            buildConfigField "String", "BASE_URL", "\"https://ttn.ott-solution.com\""
             minifyEnabled false
         }
         release {

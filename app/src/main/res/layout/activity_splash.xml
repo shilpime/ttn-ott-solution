@@ -7,21 +7,24 @@
         android:layout_height="match_parent"
         tools:context=".ui.features.SplashActivity"
         android:background="@color/splash_bg">
-    <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <ImageView
-                android:layout_width="wrap_content"
+
+
+        <com.ottsolution.demo.customviews.MutedVideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-20dp"
-                android:src="@drawable/ic_splash"/>
-    </LinearLayout>
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"/>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
