@@ -17,7 +17,6 @@
             android:layout_centerInParent="true"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/text_size_normal_s"
-            app:fontName="@string/medium_font"
             android:text="@string/no_content_available"
     />
 

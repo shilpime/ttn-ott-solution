@@ -11,5 +11,8 @@
     <string name="all_channels">ALL_CHANNELS</string>
     <string name="rail">RAIL</string>
     <string name="continue_watch">CONTINUE_WATCHING</string>
+    <string name="profile">Profile</string>
+    <string name="live">Live</string>
 
+    <bool name="portrait_only">true</bool>
 </resources>

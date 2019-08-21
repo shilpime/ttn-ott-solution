@@ -30,4 +30,6 @@
     <color name="line_color">#E4E7EE</color>
     <color name="pending_status">#E7AA01</color>
     <color name="approved_status">#05A360</color>
+    <color name="dark_hot_pink">#e5007d</color>
+    <color name="white_40">#90ffffff</color>
 </resources>

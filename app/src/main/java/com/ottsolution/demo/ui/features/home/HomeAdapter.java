@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ottsolution.demo.R;
 import com.ottsolution.demo.customviews.EndlessListAdapter;
+import com.ottsolution.demo.customviews.HomeHeroView;
 import com.ottsolution.demo.data.networking.models.HomeResponse;
 import com.ottsolution.demo.databinding.HomeRecyclerviewBinding;
+import com.ottsolution.demo.interfaces.CommonDTOClickListener;
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
     private static final int HERO_BANNER = 1000, ALL_CHANNELS = 2000, RAIL = 3000, CONTINUE_WATCHING = 4000, WIDGET = 5000;
     private final LayoutInflater inflater;
 //    private final HorizontalSpaceItemDecoration decoration;
-//    private final CommonDTOClickListener mBannerClick;
+    private final CommonDTOClickListener mBannerClick;
 
     private List<HomeResponse.Items> mList;
 //    private RecyclerViewClickItem mSeeAllListener;
@@ -31,14 +33,13 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
 
 //    private CommonDTOClickListener mItemClickedListener;
     private ViewHolderBanner mBanner;
-//    private VODShowListAdapter continueWatchingAdapter;
 
 
-    public HomeAdapter(List<HomeResponse.Items> iList, Activity iActivity) {
+    public HomeAdapter(List<HomeResponse.Items> iList, Activity iActivity, CommonDTOClickListener listener) {
         super(iList);
         mList = iList;
 //        mSeeAllListener = iSeeAllListener;
-//        mBannerClick = listener;
+        mBannerClick = listener;
 //        mItemClickedListener = iItemClickedListener;
         mActivity = iActivity;
         inflater = LayoutInflater.from(iActivity);
@@ -74,9 +75,9 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
 
             case HERO_BANNER:
 
-//                view = new HomeHeroView(parent.getContext());
-//                viewHolder = mBanner = new ViewHolderBanner(view);
-//                parent.setTag(null);
+                view = new HomeHeroView(parent.getContext());
+                viewHolder = mBanner = new ViewHolderBanner(view);
+                parent.setTag(null);
                 break;
 
             case ALL_CHANNELS:
@@ -121,16 +122,16 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
         switch (holder.getItemViewType()) {
 
             case HERO_BANNER:
-//                item = mList.get(position);
-//                ViewHolderBanner bannerViewHolder = (ViewHolderBanner) holder;
-//                if (bannerViewHolder.banner.len == 0)
-//                    bannerViewHolder.banner.initData(item, mBannerClick);
-//                else if (reset) {
-//                    bannerViewHolder.banner.reset();
-//                    bannerViewHolder.banner.initData(item, mBannerClick);
-//                    reset = false;
-//                } else
-//                    bannerViewHolder.banner.startSlide(true);
+                item = mList.get(position);
+                ViewHolderBanner bannerViewHolder = (ViewHolderBanner) holder;
+                if (bannerViewHolder.banner.len == 0)
+                    bannerViewHolder.banner.initData(item, mBannerClick);
+                else if (reset) {
+                    bannerViewHolder.banner.reset();
+                    bannerViewHolder.banner.initData(item, mBannerClick);
+                    reset = false;
+                } else
+                    bannerViewHolder.banner.startSlide(true);
                 break;
 
             case ALL_CHANNELS:
@@ -185,9 +186,6 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
 //                        } else {
 //                            Utility.showToast(mActivity, mActivity.getResources().getString(R.string.no_internet_connection));
 //                        }
-//
-////                        mSeeAllListener.onItemClicked(position, item);
-//
 //                    }
 //                });
 //
@@ -196,13 +194,6 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
 //
 //                viewHolder.mBinding.homeRecyclerView.setAdapter(continueWatchingAdapter);
 //                SharedPreference.setInt(TataSkyApp.getContext(), AppConstants.PREF_KEY_CONTINUE_WATCHING_POSITION, position);
-////                if (position == 1) {
-////                    TapTargetUtil.TargetData targetData = new TapTargetUtil.TargetData();
-////                    targetData.title = "Tap to See all contents";
-////                    targetData.setView(viewHolder.mBinding.homeSeeAll);
-////                    targetData.setTintTarget(false);
-////                    TapTargetUtil.Companion.highlightView(mActivity, targetData);
-////                }
 
                 break;
             case WIDGET:
@@ -222,13 +213,13 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
     }
 
     public void updateHeroSlideBehaviour(boolean pauseSlide) {
-//        if (mBanner != null && mBanner.banner != null) {
-//            if (pauseSlide) {
-//                mBanner.banner.stopSlide();
-//            } else {
-//                mBanner.banner.startSlide(false);
-//            }
-//        }
+        if (mBanner != null && mBanner.banner != null) {
+            if (pauseSlide) {
+                mBanner.banner.stopSlide();
+            } else {
+                mBanner.banner.startSlide(false);
+            }
+        }
     }
 
     public void notifyItemForPosition(HomeResponse.Items item) {
@@ -264,12 +255,12 @@ public class HomeAdapter extends EndlessListAdapter<HomeResponse.Items, Recycler
     }
 
     private class ViewHolderBanner extends RecyclerView.ViewHolder {
-//        private HomeHeroView banner;
+        private HomeHeroView banner;
 
         ViewHolderBanner(View itemView) {
             super(itemView);
 
-//            banner = (HomeHeroView) itemView;
+            banner = (HomeHeroView) itemView;
         }
 
     }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.ottsolution.demo.utils.UtilityKt"/>
+        <import type="android.view.View"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/aiv_layout_home_hero_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/shp_placeholder"
+            android:transitionName="@string/profile"
+        />
+
+
+        <ImageView
+            android:id="@+id/iv_layout_home_hero_channel_icon"
+            android:layout_width="@dimen/margin_55"
+            android:layout_height="@dimen/margin_55"
+            android:layout_alignBottom="@id/aiv_layout_home_hero_banner"
+            android:layout_alignRight="@id/aiv_layout_home_hero_banner"
+            android:layout_margin="@dimen/margin_16"/>
+
+
+        <TextView
+            android:id="@+id/txv_layout_home_hero_live"
+            android:layout_width="@dimen/margin_38"
+            android:layout_height="@dimen/margin_38"
+            android:layout_alignRight="@id/aiv_layout_home_hero_banner"
+            android:layout_alignTop="@id/aiv_layout_home_hero_banner"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/bg_live"
+            android:gravity="center"
+            android:text="@string/live"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_13"/>
+
+    </RelativeLayout>
+</layout>
