@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/card_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:cardCornerRadius="8dp"
+		app:cardElevation="4dp"
+		android:foreground="@drawable/dark_bottom"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+		
+		<ImageView
+			android:id="@+id/movie_image"
+			android:layout_width="match_parent"
+			android:fadingEdge="horizontal"
+			android:requiresFadingEdge="horizontal"
+			android:layout_height="match_parent"
+			android:adjustViewBounds="true"
+			android:scaleType="fitXY"/>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:elevation="2dp"
+			android:layout_height="match_parent"
+			android:background="@drawable/dark_bottom"/>
+	
+	</com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<themeMap>
+    <entry>
+        <key>theme1</key>
+        <value>R.style.AppTheme</value>
+    </entry>
+    <entry>
+        <key>theme2</key>
+        <value>R.style.AppTheme.Lime</value>
+    </entry>
+    <entry>
+        <key>theme3</key>
+        <value>R.style.AppTheme.Orange</value>
+    </entry>
+    <entry>
+        <key>theme4</key>
+        <value>R.style.AppTheme.Red</value>
+    </entry>
+</themeMap>
