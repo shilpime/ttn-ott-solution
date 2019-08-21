@@ -9,7 +9,7 @@ import io.reactivex.Single
 
 class UserAccountRepoImpl(private val service: UserAccountService): UserAccountRepository {
     override fun getHomePage(request: HomeRequest): Single<HomeResponse> {
-        return service.getHomePage(request)
+        return service.getHomePage("https://api.myjson.com/bins/iy3tj")
     }
 
 }

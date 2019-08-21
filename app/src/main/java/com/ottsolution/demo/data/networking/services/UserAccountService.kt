@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class UserAccountService(private val applicationApis: ApplicationApis) {
 
 
-    fun getHomePage(request: HomeRequest): Single<HomeResponse> {
-        return applicationApis.getHomePage(request.userId)
+    fun getHomePage(request: String): Single<HomeResponse> {
+        return applicationApis.mockHomePage(request)
     }
 }

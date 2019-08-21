@@ -12,6 +12,11 @@ class SharedPrefs(private val ctx: Context) : PrefsRepo {
 
 
     companion object {
+        fun getString(context: Context?, prefKeyCloudenaryUrl: String): Any {
+            return ""
+        }
+
+        const val PREF_KEY_CLOUDENARY_URL = "PREF_KEY_CLOUDENARY_URL"
         const val PREFS_NAME = "secured_ott_prefs"
     }
 

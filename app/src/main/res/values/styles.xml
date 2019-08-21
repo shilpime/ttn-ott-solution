@@ -123,6 +123,7 @@
         <!-- Attributes for all APIs -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/bgDark</item>x
         <item name="dialogTheme">@style/AppTheme.Dialog</item>
         <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert</item>
         <item name="colorControlHighlight">@color/selector_black_pressed</item>

@@ -5,6 +5,7 @@ import com.ottsolution.demo.data.networking.models.HomeResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.Url
 import javax.inject.Singleton
 
 
@@ -12,9 +13,15 @@ import javax.inject.Singleton
 interface ApplicationApis {
 
     @GET("/api/v1/config")
-    fun configData() : Single<ConfigResponse>
+    fun configData(): Single<ConfigResponse>
 
-    @GET("/api/v1/home")
-    fun getHomePage(@Query("userId") userId:String): Single<HomeResponse>
+    @GET("/api/v1/homePageUseCase")//https://api.myjson.com/bins/fjwwf
+    fun getHomePage(@Query("userId") userId: String): Single<HomeResponse>
+
+    @GET
+    fun mockHomePage(@Url url: String): Single<HomeResponse>
+
+    @GET
+    fun mockConfig(@Url url: String): Single<ConfigResponse>
 
 }

@@ -1,6 +1,7 @@
 package com.ottsolution.demo.data.di.modules
 
 import com.ottsolution.demo.data.networking.ApplicationApis
+import com.ottsolution.demo.data.networking.services.ConfigService
 import com.ottsolution.demo.data.networking.services.UserAccountService
 import dagger.Module
 import dagger.Provides
@@ -63,5 +64,11 @@ class NetworkModule(private val baseUrl: String) {
     @Provides
     fun provideUserAccountService(retrofit: Retrofit): UserAccountService {
         return UserAccountService(retrofit.create(ApplicationApis::class.java))
+    }
+
+    @Singleton
+    @Provides
+    fun provideConfigService(retrofit: Retrofit): ConfigService {
+        return ConfigService(retrofit.create(ApplicationApis::class.java))
     }
 }

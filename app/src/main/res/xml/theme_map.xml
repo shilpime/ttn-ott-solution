@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <themeMap>
-    <entry>
-        <key>theme1</key>
-        <value>R.style.AppTheme</value>
-    </entry>
-    <entry>
-        <key>theme2</key>
-        <value>R.style.AppTheme.Lime</value>
-    </entry>
-    <entry>
-        <key>theme3</key>
-        <value>R.style.AppTheme.Orange</value>
-    </entry>
-    <entry>
-        <key>theme4</key>
-        <value>R.style.AppTheme.Red</value>
-    </entry>
+    <entry key ="theme-1">AppTheme</entry>
+    <entry key ="theme-2">AppTheme_Green</entry>
+    <entry key ="theme-3">AppTheme_Red</entry>
+    <entry key ="theme-4">AppTheme_Orange</entry>
+    <entry key ="theme-5">AppTheme_Lime</entry>
 </themeMap>
