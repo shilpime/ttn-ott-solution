@@ -5,4 +5,11 @@
     <string name="bold_font">fonts/Montserrat-Bold.ttf</string>
     <string name="semi_bold_font">fonts/Montserrat-SemiBold.ttf</string>
     <string name="medium_font">fonts/Montserrat-Medium.ttf</string>
+    <string name="no_content_available">No Content Available</string>
+    <string name="loading">Loading</string>
+    <string name="hero_banner">HERO_BANNER</string>
+    <string name="all_channels">ALL_CHANNELS</string>
+    <string name="rail">RAIL</string>
+    <string name="continue_watch">CONTINUE_WATCHING</string>
+
 </resources>

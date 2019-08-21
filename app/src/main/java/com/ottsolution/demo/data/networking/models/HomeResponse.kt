@@ -32,6 +32,8 @@ class HomeResponse: BaseResponse() {
 
     class Items{
 
+        var viewType: Int = 0
+
         @SerializedName("id")
         var id: Int = 0
 

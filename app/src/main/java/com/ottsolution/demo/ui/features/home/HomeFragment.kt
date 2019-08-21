@@ -19,8 +19,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
         super.onViewCreated(view, savedInstanceState)
         binding.vm = viewModel
 
-
-
     }
 
     override fun getViewModelClass(): Class<HomeViewModel> = HomeViewModel::class.java
