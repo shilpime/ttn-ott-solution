@@ -4,7 +4,6 @@ package com.ottsolution.demo.ui.features.home
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -21,6 +20,7 @@ import com.ottsolution.demo.data.networking.models.HomeResponse
 import com.ottsolution.demo.databinding.FragmentHomeBinding
 import com.ottsolution.demo.interfaces.CommonDTOClickListener
 import com.ottsolution.demo.ui.base.frameworks.base.BaseFragment
+import com.ottsolution.demo.ui.features.home.adapter.HomeAdapter
 import com.ottsolution.demo.ui.features.player.PlayerActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
@@ -59,7 +59,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
             }
         }
         val manager = RVLinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        val mRailAdapter = HomeAdapter(homeResponse.data!!.items, activity, mBannerClick)
+        val mRailAdapter =
+            HomeAdapter(homeResponse.data!!.items!!, mBannerClick)
         homeRecyclerView.itemAnimator = animator
         homeRecyclerView.layoutManager = manager
         homeRecyclerView.adapter = mRailAdapter
@@ -80,7 +81,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     private val mBannerClick = object : CommonDTOClickListener {
         override fun onSubItemClick(
             iPairList: ArrayList<Pair<View, String>>,
-            iListItem: HomeResponse.ContentList,
+            iListItem: HomeResponse.ContentItem,
             iItemPosition: Int,
             iSectionPosition: Int,
             iSectionTitle: String

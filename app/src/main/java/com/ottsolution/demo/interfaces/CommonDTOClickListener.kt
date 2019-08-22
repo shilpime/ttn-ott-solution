@@ -8,7 +8,7 @@ import androidx.core.util.Pair
 interface CommonDTOClickListener {
     abstract fun onSubItemClick(
         iPairList: ArrayList<Pair<View, String>>,
-        iListItem: HomeResponse.ContentList,
+        iListItem: HomeResponse.ContentItem,
         iItemPosition: Int,
         iSectionPosition: Int,
         iSectionTitle: String

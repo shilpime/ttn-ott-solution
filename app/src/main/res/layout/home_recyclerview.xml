@@ -1,11 +1,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
-        <variable
-                name="title"
-                type="String" />
+        <variable name="railsModel"
+                  type="com.ottsolution.demo.ui.features.home.model.RailsModel"/>
     </data>
 
     <RelativeLayout
@@ -16,13 +14,13 @@
                 android:id="@+id/home_recycler_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_16"
                 android:layout_marginTop="26dp"
-                android:text="@{title}"
+                android:text="@{railsModel.title}"
                 android:textColor="@color/black"
                 android:textSize="@dimen/home_recycler_title"
-                tools:text="Top Movies" />
+                tools:text="Top Movies"/>
 
         <ImageView
                 android:id="@+id/divider"
@@ -30,20 +28,18 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/home_recycler_view_title"
                 android:layout_marginEnd="11dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="11dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="7dp"
-                android:layout_toLeftOf="@+id/home_see_all"
-                android:background="@drawable/d_i_v_i_d_e_r" />
+                android:layout_toStartOf="@+id/home_see_all"
+                android:background="@drawable/d_i_v_i_d_e_r"/>
 
         <TextView
                 android:id="@+id/home_see_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/divider"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/home_recycler_header_padding"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/home_recycler_header_padding"
                 android:drawablePadding="5dp"
                 android:layout_marginBottom="-5dp"
                 android:gravity="center_vertical"
@@ -56,11 +52,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/divider"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
                 android:layout_marginBottom="@dimen/view_margin_smallest"
+                android:adapter="@{railsModel.adapter}"
                 android:layout_marginTop="@dimen/view_margin_large"
                 android:background="@android:color/transparent"
                 android:clipToPadding="false"
-                android:paddingLeft="@dimen/view_margin_medium" />
+                android:paddingStart="@dimen/view_margin_medium"/>
 
     </RelativeLayout>
 </layout>

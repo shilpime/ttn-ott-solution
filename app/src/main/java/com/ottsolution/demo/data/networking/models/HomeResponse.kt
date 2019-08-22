@@ -47,7 +47,7 @@ class HomeResponse: BaseResponse() {
         var layoutType: String = ""
 
         @SerializedName("contentList")
-        lateinit var contentList: ArrayList<ContentList>
+        lateinit var contentList: ArrayList<ContentItem>
 
         @SerializedName("totalCount")
         var totalCount: Int = 0
@@ -55,7 +55,7 @@ class HomeResponse: BaseResponse() {
         @SerializedName("autoScroll")
         var isAutoScroll: Boolean = false
     }
-    class ContentList{
+    class ContentItem{
         @SerializedName("id")
         var id: Int = 0
         @SerializedName("contentId")

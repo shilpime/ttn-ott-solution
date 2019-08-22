@@ -14,7 +14,6 @@ import android.widget.*;
 import androidx.core.util.Pair;
 import androidx.core.view.ViewCompat;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.ottsolution.demo.R;
 import com.ottsolution.demo.data.networking.models.HomeResponse;
 import com.ottsolution.demo.interfaces.CommonDTOClickListener;
@@ -161,11 +160,11 @@ public class HomeHeroView extends FrameLayout {
 
         private final Context context;
         private final LayoutInflater mInflater;
-        private final List<HomeResponse.ContentList> iList;
+        private final List<HomeResponse.ContentItem> iList;
         //        private final CommonDTOClickListener listener;
         private int len;
 
-        ImageAdapter(Context context, List<HomeResponse.ContentList> iList) {
+        ImageAdapter(Context context, List<HomeResponse.ContentItem> iList) {
             this.context = context;
 //            this.listener = listener;
             len = iList.size();
@@ -204,7 +203,7 @@ public class HomeHeroView extends FrameLayout {
                     position = position % len;
                 }
 
-                final HomeResponse.ContentList item = (HomeResponse.ContentList) getItem(position);
+                final HomeResponse.ContentItem item = (HomeResponse.ContentItem) getItem(position);
 
                 if (convertView == null) {
                     convertView = mInflater.inflate(R.layout.layout_home_hero, null);
@@ -268,7 +267,6 @@ public class HomeHeroView extends FrameLayout {
 //                            .diskCacheStrategy(DiskCacheStrategy.RESULT)
 //                            .placeholder(R.drawable.hero_place_holder)
                             .into(holder.banner);
-                    Log.e("Url", url);
                 } catch (Exception e) {
                     Log.e("Error", e.getMessage());
                 }
