@@ -45,7 +45,7 @@
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textSize="@dimen/text_size_23"
+                    android:textSize="@dimen/text_size_28"
                     tools:text="Title" />
 
                 <TextView
@@ -53,13 +53,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/vod_title"
-                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_16"
                     android:layout_marginEnd="@dimen/margin_16"
                     android:ellipsize="end"
                     android:text="Sub title"
                     android:textAllCaps="true"
                     android:lines="2"
-                    android:textColor="@color/white"
+                    android:textColor="@color/white_40"
                     android:textSize="@dimen/text_size_16"
                     tools:text="2015 | Comedy, Drama | 121m" />
             </RelativeLayout>
