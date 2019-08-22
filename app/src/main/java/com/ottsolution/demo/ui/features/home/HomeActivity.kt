@@ -6,7 +6,7 @@ import com.ottsolution.demo.R
 import com.ottsolution.demo.ui.base.frameworks.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : BaseActivity() {
+class HomeActivity : BaseActivity<HomeViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

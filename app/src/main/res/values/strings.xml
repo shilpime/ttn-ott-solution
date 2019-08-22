@@ -16,4 +16,7 @@
     <string name="search">Search</string>
     <bool name="portrait_only">true</bool>
     <string name="sample_url">https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8</string>
+
+    <string name="plus_more">+&#160;More</string>
+    <string name="minus_less">-&#160;Less</string>
 </resources>

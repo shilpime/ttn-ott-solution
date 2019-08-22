@@ -8,4 +8,12 @@
         <attr name="selectableRoundedRectDrawableInverse" format="reference"/>
         <attr name="selectableRoundedRectDrawableColored" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer" />
+
+        <!--for font-->
+        <attr name="expandFontName" format="string" />
+        <attr name="expandLeftDrawableOnly" format="integer" />
+    </declare-styleable>
 </resources>

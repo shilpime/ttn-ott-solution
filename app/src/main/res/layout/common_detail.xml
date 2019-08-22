@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="subtitle"
+                type="String" />
+        <variable
+                name="desc"
+                type="String" />
+    </data>
+
+    <LinearLayout
+            android:id="@+id/common_detail_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:id="@+id/main_view_detail_free"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/catch_up_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/margin_35"
+                    android:ellipsize="end"
+                    android:text="Title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_23"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="11dp" />
+
+                <TextView
+                        android:id="@+id/catch_up_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toRightOf="@+id/logo"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Subtitle"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/main_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_12"
+                android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/key_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15"/>
+
+            <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@+id/key_desc"
+                    android:text=":"
+                    android:textColor="@color/white"/>
+
+            <TextView
+                    android:id="@+id/detail_play_trailer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/line"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Play Trailer"
+                    android:textColor="@color/cool_blue"
+                    android:textSize="@dimen/text_size_15"
+                    android:visibility="gone"/>
+        </RelativeLayout>
+
+        <com.ottsolution.demo.customviews.AutoResizeTextView
+                android:id="@+id/detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                android:lineSpacingExtra="@dimen/line_spacing_extra_9"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key_desc" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:visibility="gone">
+            <RelativeLayout
+                    android:id="@+id/row_producer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_20">
+
+                <TextView
+                        android:id="@+id/key_producer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Producer:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+
+                <TextView
+                        android:id="@+id/producer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toRightOf="@+id/key_producer"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/row_director"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_7">
+
+                <TextView
+                        android:id="@+id/key_director"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Director:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+
+                <TextView
+                        android:id="@+id/director"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toRightOf="@+id/key_director"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/row_starring"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_7">
+
+                <TextView
+                        android:id="@+id/key_starring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Starring:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+
+                <TextView
+                        android:id="@+id/detail_starring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toRightOf="@+id/key_starring"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/row_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_7">
+
+                <TextView
+                        android:id="@+id/key_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audio:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+
+                <TextView
+                        android:id="@+id/detail_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/key_audio"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/row_expiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_7">
+
+                <TextView
+                        android:id="@+id/key_expires"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expires:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+
+                <TextView
+                        android:id="@+id/detail_expire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toRightOf="@+id/key_expires"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+    </LinearLayout>
+</layout>

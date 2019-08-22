@@ -2,6 +2,7 @@ package com.ottsolution.demo.data.networking
 
 import com.ottsolution.demo.data.networking.models.ConfigResponse
 import com.ottsolution.demo.data.networking.models.HomeResponse
+import com.ottsolution.demo.data.networking.models.VodDetailResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -24,4 +25,6 @@ interface ApplicationApis {
     @GET
     fun mockConfig(@Url url: String): Single<ConfigResponse>
 
+    @GET
+    fun mockVodDetail(@Url url: String): Single<VodDetailResponse>
 }

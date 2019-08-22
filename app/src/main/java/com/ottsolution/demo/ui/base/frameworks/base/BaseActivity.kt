@@ -20,8 +20,9 @@ import java.util.*
 import javax.inject.Inject
 
 
-abstract class BaseActivity : DaggerAppCompatActivity() {
+abstract class BaseActivity<VM : BaseViewModel> : DaggerAppCompatActivity() {
 
+    protected lateinit var viewModel: VM
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 

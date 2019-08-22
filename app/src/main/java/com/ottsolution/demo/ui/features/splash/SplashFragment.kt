@@ -11,6 +11,7 @@ import com.ottsolution.demo.data.networking.models.ConfigResponse
 import com.ottsolution.demo.databinding.SplashFragmentBinding
 import com.ottsolution.demo.ui.base.frameworks.base.BaseActivity
 import com.ottsolution.demo.ui.base.frameworks.base.BaseFragment
+import com.ottsolution.demo.ui.base.frameworks.base.BaseViewModel
 import com.ottsolution.demo.ui.features.home.HomeActivity
 import kotlinx.android.synthetic.main.splash_fragment.*
 import java.util.*
@@ -39,7 +40,7 @@ class SplashFragment : BaseFragment<SplashFragmentBinding, SplashViewModel>() {
     private fun initView() {
         try {
             videoView.setMediaController(null)
-            val path = "android.resource://" + (activity as BaseActivity).packageName + "/" + R.raw.splash
+            val path = "android.resource://" + (activity as BaseActivity<BaseViewModel>).packageName + "/" + R.raw.splash
             videoView.setVideoURI(Uri.parse(path))
             videoView.start()
             videoView.setOnPreparedListener {

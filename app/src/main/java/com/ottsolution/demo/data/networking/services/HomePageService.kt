@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 
 @Singleton
-class UserAccountService(private val applicationApis: ApplicationApis) {
+class HomePageService(private val applicationApis: ApplicationApis) {
 
 
     fun getHomePage(request: String): Single<HomeResponse> {

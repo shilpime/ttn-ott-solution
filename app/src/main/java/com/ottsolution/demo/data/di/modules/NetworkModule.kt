@@ -2,7 +2,8 @@ package com.ottsolution.demo.data.di.modules
 
 import com.ottsolution.demo.data.networking.ApplicationApis
 import com.ottsolution.demo.data.networking.services.ConfigService
-import com.ottsolution.demo.data.networking.services.UserAccountService
+import com.ottsolution.demo.data.networking.services.DetailService
+import com.ottsolution.demo.data.networking.services.HomePageService
 import dagger.Module
 import dagger.Provides
 import okhttp3.Interceptor
@@ -62,13 +63,19 @@ class NetworkModule(private val baseUrl: String) {
      */
     @Singleton
     @Provides
-    fun provideUserAccountService(retrofit: Retrofit): UserAccountService {
-        return UserAccountService(retrofit.create(ApplicationApis::class.java))
+    fun provideUserAccountService(retrofit: Retrofit): HomePageService {
+        return HomePageService(retrofit.create(ApplicationApis::class.java))
     }
 
     @Singleton
     @Provides
     fun provideConfigService(retrofit: Retrofit): ConfigService {
         return ConfigService(retrofit.create(ApplicationApis::class.java))
+    }
+
+    @Singleton
+    @Provides
+    fun provideDetailsService(retrofit: Retrofit): DetailService {
+        return DetailService(retrofit.create(ApplicationApis::class.java))
     }
 }

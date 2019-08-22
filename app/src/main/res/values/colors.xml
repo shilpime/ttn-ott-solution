@@ -170,4 +170,9 @@
     <color name="selector_blue_pressed">#442962FF</color>
     <color name="selector_purple_focused">#22AA00FF</color>
     <color name="selector_purple_pressed">#44AA00FF</color>
+
+
+    <color name="greyish_brown">#424242</color>
+    <color name="cool_blue">#5087c7</color>
+    <color name="warm_grey">#979797</color>
 </resources>
