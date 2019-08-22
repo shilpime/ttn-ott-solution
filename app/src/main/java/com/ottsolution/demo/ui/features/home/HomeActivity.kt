@@ -2,9 +2,8 @@ package com.ottsolution.demo.ui.features.home
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.findNavController
-import com.ottsolution.demo.ui.base.frameworks.base.BaseActivity
 import com.ottsolution.demo.R
+import com.ottsolution.demo.ui.base.frameworks.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {

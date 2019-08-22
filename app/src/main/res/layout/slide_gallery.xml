@@ -59,11 +59,11 @@
                     android:id="@+id/layout_dots"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|left"
+                    android:layout_gravity="bottom|center_horizontal"
                     android:layout_margin="24dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:gravity="bottom|left"
+                    android:gravity="bottom|center_horizontal"
                     android:orientation="horizontal">
             </LinearLayout>
 

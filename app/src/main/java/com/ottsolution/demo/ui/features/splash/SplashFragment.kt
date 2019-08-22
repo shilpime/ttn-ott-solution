@@ -42,6 +42,9 @@ class SplashFragment : BaseFragment<SplashFragmentBinding, SplashViewModel>() {
             val path = "android.resource://" + (activity as BaseActivity).packageName + "/" + R.raw.splash
             videoView.setVideoURI(Uri.parse(path))
             videoView.start()
+            videoView.setOnPreparedListener {
+                it.setVolume(0f, 0f);
+            }
         } catch (e: Exception) {
             Log.e("", e.message, e)
         }
@@ -50,7 +53,8 @@ class SplashFragment : BaseFragment<SplashFragmentBinding, SplashViewModel>() {
     private fun onCompletedCheck(configData: ConfigResponse) {
         activity?.let {
             val intent = Intent(it, HomeActivity::class.java)
-            var randomTheme = "theme-" + Random.nextInt(1,6)
+
+            val randomTheme = configData.data!!.display!!.android!!.theme//"theme-" + Random.nextInt(1,6)
 //            intent.putExtra("theme", configData.data?.display?.android?.theme ?: randomTheme)
             intent.putExtra("theme", randomTheme)
             intent.putExtra("background", configData.data?.display?.android?.background ?: "default")

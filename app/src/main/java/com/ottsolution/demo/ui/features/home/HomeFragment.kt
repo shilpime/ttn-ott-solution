@@ -1,8 +1,10 @@
 package com.ottsolution.demo.ui.features.home
 
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -30,6 +32,8 @@ import java.util.*
  */
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
+    lateinit var mActivity : Activity
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -42,6 +46,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mActivity = this.activity!!
         binding.vm = viewModel
         viewModel.getHomeData().observe(this, Observer { onHomeResponseFetched(it) })
     }
@@ -55,10 +60,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
         }
         val manager = RVLinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         val mRailAdapter = HomeAdapter(homeResponse.data!!.items, activity, mBannerClick)
-        homeRecyclerView.setItemAnimator(animator)
-        homeRecyclerView.setLayoutManager(manager)
-        homeRecyclerView.setAdapter(mRailAdapter)
-        homeRecyclerView.post({ mRailAdapter.notifyDataSetChanged() })
+        homeRecyclerView.itemAnimator = animator
+        homeRecyclerView.layoutManager = manager
+        homeRecyclerView.adapter = mRailAdapter
+        homeRecyclerView.post { mRailAdapter.notifyDataSetChanged() }
     }
 
     override fun getViewModelClass(): Class<HomeViewModel> = HomeViewModel::class.java
@@ -67,24 +72,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.play_btn -> {
-                activity?.let { startActivity(Intent(it, PlayerActivity::class.java)) }
-            }
+
         }
         return true
     }
-}
 
-object mBannerClick : CommonDTOClickListener {
-    override fun onSubItemClick(
-        iPairList: ArrayList<Pair<View, String>>,
-        iListItem: HomeResponse.ContentList,
-        iItemPosition: Int,
-        iSectionPosition: Int,
-        iSectionTitle: String
-    ) {
-        //
+    private val mBannerClick = object : CommonDTOClickListener {
+        override fun onSubItemClick(
+            iPairList: ArrayList<Pair<View, String>>,
+            iListItem: HomeResponse.ContentList,
+            iItemPosition: Int,
+            iSectionPosition: Int,
+            iSectionTitle: String
+        ) {
+            activity?.let { startActivity(Intent(it, PlayerActivity::class.java)) }
+        }
     }
-
-
 }
